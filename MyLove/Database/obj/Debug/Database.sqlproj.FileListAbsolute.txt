@@ -1,0 +1,9 @@
+D:\Code\MyLove\Database\bin\Debug\Database.dacpac
+D:\Code\MyLove\Database\bin\Debug\Database.dll
+D:\Code\MyLove\Database\bin\Debug\Database.pdb
+D:\Code\MyLove\Database\obj\Debug\Model.xml
+D:\Code\MyLove\Database\obj\Debug\refactor.xml
+D:\Code\MyLove\Database\obj\Debug\postdeploy.sql
+D:\Code\MyLove\Database\obj\Debug\predeploy.sql
+D:\Code\MyLove\Database\obj\Debug\Database.dll
+D:\Code\MyLove\Database\obj\Debug\Database.pdb

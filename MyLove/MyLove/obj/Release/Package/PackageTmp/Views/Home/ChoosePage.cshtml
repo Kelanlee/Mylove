@@ -1,0 +1,130 @@
+﻿@using System.Collections
+@using System.Activities.Expressions
+@model IEnumerable<MyLove.Models.Location>
+@{
+    ViewBag.Title = "ChoosePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div  data-role="page" id="pageindex" >
+    <div data-role="header" data-theme="b" >
+        <a href="@Url.Action("LogOut")" data-role="button" data-icon="grid" class="ui-btn-left">登出</a>
+        <a href="#routepage" data-role="button" data-icon="grid" data-rel="dialog" class="ui-btn-right">菜单</a>
+    </div>
+    <div data-role="header" data-theme="b" id="h2"><h1>选择困难</h1>
+    </div>
+   
+    <div data-role="content">
+        <script type="text/javascript">
+
+            var flag = 1;
+            var arr;
+            var timer;
+            var times = 0;
+            var num;
+
+            function change() {
+                document.getElementById("result").innerHTML = arr[parseInt(Math.random() * (arr.length))];
+            }
+
+            function ok() {
+                document.getElementById("start").setAttribute("onclick", "");
+                clearInterval(timer);
+                num = parseInt(Math.random() * (11)) + 5;
+                t = setInterval('comeResult()', 800);
+
+
+            }
+
+            function comeResult() {
+                document.getElementById("result").innerHTML = arr[parseInt(Math.random() * (arr.length))];
+                times++;
+                if (times == num) {
+                    clearInterval(t);
+                    times = 0;
+                    document.getElementById("start").setAttribute("onclick", "myFunction()");
+                    document.getElementById("result").setAttribute("style", "border: solid white;background:pink  ; ");
+
+                }
+            }
+            function myFunction() {
+                document.getElementById("result").setAttribute("style", "background-color:none");
+                var l = document.getElementsByName("locations");
+                arr = [];
+                for (var i = 0; i < l.length; i++) {
+                    if (l[i].checked) {
+                        arr.push(l[i].value);
+                    }
+                }
+                if (arr.length < 1) {
+                    document.getElementById("result").innerHTML = "请选择地方";
+
+                }
+                else {
+                    document.getElementById("start").setAttribute("onclick", "ok()");
+                    clearInterval(timer);
+                    timer = setInterval('change()', 50);
+                }
+
+            }
+
+        </script>
+        <legend style="font-size: 30.5px;">请选择我们要去的地方：</legend>
+        <p id="result" >结果</p>
+        <input type="button" id="start" onclick="myFunction()" value="点击这里" />
+        <div data-role="collapsible" name="WishList">
+            <h1>地点选择</h1>
+            @if (Model.Count() < 1)
+            {
+                <p>还没有写下任何地点</p>
+            }
+            @foreach (var m in Model)
+            {
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <label for="@m.Id">@m.AddressName</label>
+                    <input data-role="button" type="checkbox" name="locations" id="@m.Id" value="@m.AddressName">
+                    <label for="deleteRed">删除</label>
+                    <a data-role="button" name="delete" id="delete"  href="@Url.Action("DeleteLocation",new{ Id=m.Id})">删除</a>
+                </fieldset>
+           
+            }
+        
+        </div>
+            <form action="@Url.Action("AddALocation","Home")" method="POST">
+                <input type="text" name="AddressName" placeholder="地点" style="height:150px"/>
+                <input type="submit" value="增加地点"/>
+            </form> 
+        
+     
+
+       
+       
+        </div>
+    <div data-role="footer" data-theme="b">
+  <h1>Love You！</h1>
+  </div>
+</div>
+<div data-role="page" id="routepage" >
+    <div data-role="content">
+        <table  name="router" id="router">
+        <tr>
+                <td><a data-role="button" href="@Url.Action("Home", "Home")">主页</a></td>
+                <td><a data-role="button" href="@Url.Action("Review", "Home")">批阅奏章</a></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><a data-role="button" href="@Url.Action("Choose", "Home")">选择困难</a></td>
+                <td><a data-role="button" href="@Url.Action("Wish","Home")">许愿</a></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2">
+                          <a  data-role="button" data-icon="back" data-rel="back">返回</a>
+                      </td>
+                
+            </tr>
+    </table>
+    </div>
+    
+</div>
+

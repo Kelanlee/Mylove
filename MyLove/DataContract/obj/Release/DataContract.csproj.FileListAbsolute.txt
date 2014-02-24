@@ -1,0 +1,4 @@
+D:\Code\MyLove\DataContract\bin\Release\DataContract.dll
+D:\Code\MyLove\DataContract\bin\Release\DataContract.pdb
+D:\Code\MyLove\DataContract\obj\Release\DataContract.dll
+D:\Code\MyLove\DataContract\obj\Release\DataContract.pdb

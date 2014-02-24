@@ -1,0 +1,103 @@
+﻿@using System.Collections
+@using System.Activities.Expressions
+@model IEnumerable<MyLove.Models.Wish>
+ @{   ViewBag.Title = "ReviewPage";
+Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+<script>
+    function approvalWish(wishId) {
+        $.post("@Url.Action("ApproveWish","Home")",wishId,function(data) {
+            
+        });
+        window.Location.href = "@Url.Action("Review","Home")";
+    }
+    
+</script>
+<div  data-role="page" id="pageindex" >
+    <div data-role="header" data-theme="b" data-fullscreen="true" >
+        <a href="@Url.Action("LogOut")" data-role="button" data-icon="grid" class="ui-btn-left">登出</a>
+        <a href="#routepage" data-role="button" data-icon="grid" data-rel="dialog" class="ui-btn-right">菜单</a>
+        
+    
+    </div>
+    <div data-role="header" data-theme="b" id="h2"><h1>批阅奏章</h1>
+    </div>
+   
+    <div data-role="content">
+        @if (!Model.Any())
+        {
+            <p>暂时还没有愿望</p>
+        }
+        else
+        {
+            <div class="WishList">
+            @foreach (var wish in Model)
+                {
+                
+                
+                    <div class="Wish paper" data-role="collapsible">
+                        @if (wish.WishState == 1)
+                        {
+                            <h1>皇上还没批阅喔：@wish.WishTitle 日期:@wish.WishTime.ToString("u")</h1>
+                            <p>@wish.Wishcontext</p>
+                        }
+                        else
+                        {
+                            <h1>朕已批:@wish.WishTitle 日期:@wish.WishTime.ToString("u")</h1>
+                            <p>批阅时间：@wish.ApprovalTime.ToString("u")</p>
+                            <p>@wish.Wishcontext</p>
+                        }
+
+                        
+                        
+                        @if (wish.WishState == 1)
+                        {
+                            <form method="POST" data-ajax="false" action="@Url.Action("ApproveWish")">  
+                                <input class="hide"  data-role="none"type="text" name="WishId" value="@wish.WishId"  style="display:none;"/>
+
+                            <input type ="submit" value="批准">
+                            </form>
+                        }
+                        
+
+                    </div>
+
+                
+                
+                }
+            
+                
+            </div>
+        }
+    </div>
+    <div data-role="footer" data-theme="b">
+  <h1>Love You！</h1>
+  </div>
+</div>
+<div data-role="page" id="routepage" >
+    <div data-role="content">
+        
+            <table  name="router" id="router">
+                
+                <tr>
+                    <td><a data-role="button" href="@Url.Action("Home", "Home")">主页</a></td>
+                    <td><a data-role="button" href="@Url.Action("Review", "Home")">批阅奏章</a></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><a data-role="button" href="@Url.Action("Choose", "Home")">选择困难</a></td>
+                    <td><a data-role="button" href="@Url.Action("Wish", "Home")">许愿</a></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="2">
+                        <a  data-role="button" data-icon="back" data-rel="back">返回</a>
+                    </td>
+                </tr>
+            </table>
+        
+    </div>
+    
+</div>
+

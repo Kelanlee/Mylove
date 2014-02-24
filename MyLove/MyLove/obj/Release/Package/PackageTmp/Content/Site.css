@@ -1,0 +1,266 @@
+﻿html {
+    margin:0 auto;
+    width: auto;
+    color: pink;
+}
+body {
+    margin: auto;
+    width: auto;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: pink;
+}
+#router {
+    margin:0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+}
+.ui-header .ui-title {
+    
+    font-size: 100px;
+    margin-top: -70px;
+
+    width: 90%;
+}
+
+.ui-footer .ui-title {
+    font-size: 30px;
+    
+}
+.ui-header ,.ui-footer {
+    height: 130px;
+    align-content: center;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+
+div {
+    margin:0 auto;
+    width: auto;
+}
+
+.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head+body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head+body .ui-btn.ui-btn-b:visited {
+    background-color: #EE5A5A;
+    border-color: white;
+    
+
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+background: #FFD5D5;
+border-color: #bbb;
+color: #333;
+text-shadow: 0 1px 0 #f3f3f3;
+}
+.ui-bar-b, .ui-page-theme-b .ui-bar-inherit, html .ui-bar-b .ui-bar-inherit, html .ui-body-b .ui-bar-inherit, html body .ui-group-theme-b .ui-bar-inherit {
+background: #EE5A5A;
+border-color: #EE5A5A;
+color: #fff;
+text-shadow: 0 1px 0 #030202;
+font-weight: 800;
+    font-family: 微软雅黑;
+}
+.h2 {
+    background: pink;
+}
+.ui-btn {
+    font-size: 30.5px;
+    height: 50px;
+}
+.ui-btn, label.ui-btn {
+font-weight: 700;
+border-width: 3px;
+border-style: solid;
+font-family: Lucida Grande;
+}
+
+.ui-header .ui-btn-left, .ui-header .ui-btn-right {
+font-size: 30.5px;
+font-family: 微软雅黑;
+}
+
+.ui-dialog-contain {
+width: 92.5%;
+max-width: 90%;
+margin: 10% auto 1em;
+padding: 0;
+position: relative;
+top: -1em;
+}
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+.ui-input-text {
+    font-size: 40px;
+    height: 150px;
+}
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+/* Review*/
+
+.WishList{
+    text-align: center;
+    align-content: center;
+
+    width: 90%;
+  margin: auto;
+  /*overflow: hidden;
+  float: left;
+  border: 1px solid #EDEDED;
+  
+  border-radius: 8px;
+  box-shadow:0 -5px 30px rgba(0,0,0,0.2) inset;*/
+}
+
+
+
+/*.paper{
+
+  border: 1px solid #EDEDED;
+
+}*/
+
+/*Login*/
+
+
+
+#LoginTable {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+
+/*.ui-input-text {
+    width: 100%;
+}*/
+
+#sumbit {
+    margin-right: 15px;
+}
+
+/*Home*/
+
+#HomeContent {
+    margin:auto;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+html,body,div,span,ul,li,img{border:none;padding:0;margin:0}
+ul{list-style:none}
+slider{ display: none;}
+.focus span{width:10px;height:10px;margin-right:10px;border-radius:50%;background:#666;font-size:0}
+.focus span.current{background:#fff}
+
+.hide {
+    display: none;
+}
+
+
+/*Choose*/
+
+
+
+#ui-checkbox {
+    width: 50%;
+}
+
+.ui-btn, label.ui-btn {
+font-weight: 700;
+border-width: 3px;
+border-style: solid;
+font-family: Lucida Grande;
+font-size: 30.5px;
+}
+
+#result {
+    margin: auto;
+    width: 60%;
+    
+    text-align: center;
+    font-size: 30.5px;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-last-child {
+border-right-width: 1px;
+width: 30%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls {
+display: inline-block;
+vertical-align: middle;
+    width: 80%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-checkbox {
+    width: 45%;
+}
+
+p {
+    font-size: 28.5px;
+}

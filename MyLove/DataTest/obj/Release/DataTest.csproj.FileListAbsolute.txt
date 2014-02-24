@@ -1,0 +1,15 @@
+D:\Code\MyLove\DataTest\obj\Release\DataTest.csprojResolveAssemblyReference.cache
+D:\Code\MyLove\DataTest\bin\Release\DataTest.dll.config
+D:\Code\MyLove\DataTest\bin\Release\DataTest.dll
+D:\Code\MyLove\DataTest\bin\Release\DataTest.pdb
+D:\Code\MyLove\DataTest\bin\Release\Data.dll
+D:\Code\MyLove\DataTest\bin\Release\EntityFramework.dll
+D:\Code\MyLove\DataTest\bin\Release\EntityFramework.SqlServer.dll
+D:\Code\MyLove\DataTest\bin\Release\nunit.framework.dll
+D:\Code\MyLove\DataTest\bin\Release\log4net.dll
+D:\Code\MyLove\DataTest\bin\Release\Data.pdb
+D:\Code\MyLove\DataTest\bin\Release\EntityFramework.xml
+D:\Code\MyLove\DataTest\bin\Release\EntityFramework.SqlServer.xml
+D:\Code\MyLove\DataTest\bin\Release\log4net.xml
+D:\Code\MyLove\DataTest\obj\Release\DataTest.dll
+D:\Code\MyLove\DataTest\obj\Release\DataTest.pdb

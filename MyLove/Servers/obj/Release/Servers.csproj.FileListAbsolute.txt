@@ -1,0 +1,16 @@
+D:\Code\MyLove\Servers\bin\Release\Servers.dll.config
+D:\Code\MyLove\Servers\bin\Release\Servers.dll
+D:\Code\MyLove\Servers\bin\Release\Servers.pdb
+D:\Code\MyLove\Servers\bin\Release\Data.dll
+D:\Code\MyLove\Servers\bin\Release\DataContract.dll
+D:\Code\MyLove\Servers\bin\Release\EntityFramework.dll
+D:\Code\MyLove\Servers\bin\Release\EntityFramework.SqlServer.dll
+D:\Code\MyLove\Servers\bin\Release\DataContract.pdb
+D:\Code\MyLove\Servers\bin\Release\Data.pdb
+D:\Code\MyLove\Servers\bin\Release\EntityFramework.xml
+D:\Code\MyLove\Servers\bin\Release\EntityFramework.SqlServer.xml
+D:\Code\MyLove\Servers\obj\Release\Servers.csprojResolveAssemblyReference.cache
+D:\Code\MyLove\Servers\obj\Release\Servers.dll
+D:\Code\MyLove\Servers\obj\Release\Servers.pdb
+D:\Code\MyLove\Servers\bin\Release\log4net.dll
+D:\Code\MyLove\Servers\bin\Release\log4net.xml

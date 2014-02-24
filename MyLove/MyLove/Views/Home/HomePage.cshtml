@@ -1,0 +1,81 @@
+﻿@using System.Collections
+@using System.Activities.Expressions
+@model IEnumerable<MyLove.Models.Tracking>
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div  data-role="page"  id="pageindex" >
+    <div data-role="header" data-theme="b" id="h1">
+        <a href="@Url.Action("LogOut")" data-role="button" data-icon="grid" class="ui-btn-left">登出</a>
+        <a href="#routepage" data-role="button" data-icon="grid" data-rel="dialog" class="ui-btn-right">菜单</a>
+    </div>
+    <div data-role="header" data-theme="b" id="h2"><h1>我的主页</h1>
+    </div>
+    
+    <div id="HomeContent" data-role="content">
+        <script type="text/javascript" src="@Url.Content("~/Scripts/yxMobileSlider.js")"></script>
+  <script>
+      $(".slider").yxMobileSlider({ width: 640, height: 320, during: 3000 })
+  </script>
+        <div class="slider">
+            <ul>
+                <li><a href=""><img src="@Url.Content("~/Content/imgs/1.jpg")"></a></li>
+                <li><a href=""><img src="@Url.Content("~/Content/imgs/2.jpg")">测试标题一</a></li>
+                <li><a href=""><img src="@Url.Content("~/Content/imgs/3.jpg")">测试标题一</a></li>
+                <li><a href=""><img src="@Url.Content("~/Content/imgs/4.jpg")">测试标题一</a></li>
+                <li><a href=""><img src="@Url.Content("~/Content/imgs/5.jpg")">测试标题一</a></li>
+            </ul>
+        </div>
+        <p>欢迎！</p>
+        <p>祝你生日快乐</p>
+        <div class="WishList">
+            @if (!Model.Any())
+            {
+
+            }
+            else
+            {
+                foreach (var m in Model)
+                {
+                    <div class="Wish paper" data-role="collapsible"><h1>@m.TrackingName @m.TrackingTime.ToString("u")</h1><p>@m.TrackingName</p></div>
+  
+                }
+            }
+                
+
+        </div>
+
+    </div>
+    <div data-role="footer" data-theme="b">
+  <h1>Love You！</h1>
+  </div>
+</div>
+<div data-role="page" id="routepage" >
+    <div data-role="content">
+        <table  name="router" id="router">
+            <tr>
+                <td><a data-role="button" href="@Url.Action("Home", "Home")">主页</a></td>
+                <td><a data-role="button" href="@Url.Action("Review", "Home")">批阅奏章</a></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><a data-role="button" href="@Url.Action("Choose", "Home")">选择困难</a></td>
+                <td><a data-role="button" href="@Url.Action("Wish", "Home")">许愿</a></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2">
+                          <a  data-role="button" data-icon="back" data-rel="back">返回</a>
+                      </td>
+                
+            </tr>
+    </table>
+    </div>
+    
+</div>
+<script type="text/javascript" src="@Url.Content("~/Scripts/yxMobileSlider.js")"></script>
+  <script>
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000})
+  </script>
